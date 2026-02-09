@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="model_names">
+        <item>Spleeter 2-stem</item>
+        <item>Spleeter 4-stem</item>
+        <item>Spleeter 5-stem</item>
+    </string-array>
+    
+    <string-array name="model_values">
+        <item>spleeter_2stems</item>
+        <item>spleeter_4stems</item>
+        <item>spleeter_5stems</item>
+    </string-array>
+    
+    <string-array name="quality_names">
+        <item>Performance - Fastest, lower quality</item>
+        <item>Balanced - Good quality, reasonable speed</item>
+        <item>Quality - Best quality, slower</item>
+    </string-array>
+    
+    <string-array name="quality_values">
+        <item>performance</item>
+        <item>balanced</item>
+        <item>quality</item>
+    </string-array>
+    
+    <string-array name="visualizer_names">
+        <item>Bars</item>
+        <item>Waveform</item>
+        <item>Circular</item>
+        <item>Spectrum</item>
+    </string-array>
+    
+    <string-array name="visualizer_values">
+        <item>bars</item>
+        <item>waveform</item>
+        <item>circular</item>
+        <item>spectrum</item>
+    </string-array>
+</resources>

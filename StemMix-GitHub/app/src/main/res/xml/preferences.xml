@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <PreferenceCategory android:title="AI Models">
+        
+        <Preference
+            android:key="manage_models"
+            android:title="Manage AI Models"
+            android:summary="Download, delete, or select stem separation models"
+            android:icon="@android:drawable/ic_menu_manage"/>
+        
+        <ListPreference
+            android:key="model_selection"
+            android:title="Active Model"
+            android:entries="@array/model_names"
+            android:entryValues="@array/model_values"
+            android:defaultValue="spleeter_4stems"
+            android:summary="Currently using: %s"
+            android:dependency="manage_models"/>
+            
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="Audio Processing">
+        
+        <ListPreference
+            android:key="quality_preset"
+            android:title="Quality Preset"
+            android:entries="@array/quality_names"
+            android:entryValues="@array/quality_values"
+            android:defaultValue="balanced"
+            android:summary="Balanced - Good quality, reasonable speed"/>
+        
+        <SeekBarPreference
+            android:key="buffer_length"
+            android:title="Buffer Length"
+            android:summary="Adjust if processing is struggling"
+            android:min="1"
+            android:max="5"
+            android:defaultValue="2"
+            app:showSeekBarValue="true"
+            app:seekBarIncrement="1"/>
+            
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="Performance">
+        
+        <SwitchPreferenceCompat
+            android:key="show_cpu_usage"
+            android:title="Show CPU Usage"
+            android:summary="Display CPU usage in status bar"
+            android:defaultValue="true"/>
+        
+        <SwitchPreferenceCompat
+            android:key="show_battery_estimate"
+            android:title="Show Battery Estimate"
+            android:summary="Estimate remaining battery time"
+            android:defaultValue="true"/>
+            
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="Interface">
+        
+        <SwitchPreferenceCompat
+            android:key="remember_settings"
+            android:title="Remember Last Settings"
+            android:summary="Restore fader levels and effects on app start"
+            android:defaultValue="true"/>
+        
+        <ListPreference
+            android:key="visualizer_style"
+            android:title="Default Visualizer Style"
+            android:entries="@array/visualizer_names"
+            android:entryValues="@array/visualizer_values"
+            android:defaultValue="bars"
+            android:summary="Bars"/>
+            
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="About">
+        
+        <Preference
+            android:key="version"
+            android:title="Version"
+            android:summary="1.0.0"/>
+        
+        <Preference
+            android:key="licenses"
+            android:title="Open Source Licenses"
+            android:summary="View third-party licenses"/>
+            
+    </PreferenceCategory>
+    
+</PreferenceScreen>
